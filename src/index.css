@@ -49,6 +49,14 @@ ol, ul {
   margin-left: 20px;
 }
 
+.headerInfo {
+  display: flex;
+}
+
+.text {
+  margin-right: 20px;
+}
+
 .bold {
   font-weight: bold;
 }

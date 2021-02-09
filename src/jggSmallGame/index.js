@@ -2,7 +2,10 @@ import React from "react";
 import Board from "./components/board.js";
 import { calculateWinner } from "./methods/index";
 import "./index.css";
+import { inject, observer } from "mobx-react";
 
+@inject("GameStore")
+@observer
 class Game extends React.Component {
   constructor(props) {
     super(props);

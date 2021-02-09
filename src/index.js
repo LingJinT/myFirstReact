@@ -1,7 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Game from "./jggSmallGame";
+import { Provider } from "mobx-react";
+import GameStore from "./jggSmallGame/store/index.js"
 
-ReactDOM.render(<Game />, document.getElementById("root"));
+const stores = {
+    GameStore,
+}
 
-
+ReactDOM.render(
+  <Provider {...stores}>
+    <Game />
+  </Provider>,
+  document.getElementById("root")
+);
